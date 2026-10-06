@@ -265,6 +265,17 @@ public final class SlickSelfTest {
         then(15, () -> {
             check(MenuRenderer.glows() > mark, "hovering a slot did not light it up");
             screenshot(mc, "inventory-hover");
+            run(mc, "recipe give @p *");
+            run(mc, "item replace entity @p weapon.offhand with shield");
+            Ui.hover(mc, 0, 0);
+        });
+        then(10, () -> {
+            AbstractContainerScreen<?> screen = (AbstractContainerScreen<?>) Screens.current(mc);
+            Ui.click(screen, ((ContainerScreenAccessor) screen).slick$leftPos() + 114, screen.height / 2 - 13);
+        });
+        then(20, () -> {
+            screenshot(mc, "inventory-recipe-book");
+            mc.player.getRecipeBook().setOpen(RecipeBookType.CRAFTING, false);
             Inventory inventory = mc.player.getInventory();
             CraftingMenu menu = new CraftingMenu(1, inventory);
             menu.getSlot(1).set(new ItemStack(Items.OAK_PLANKS));

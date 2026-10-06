@@ -332,7 +332,8 @@ public final class MenuRenderer {
             return true;
         }
         if (part.equals("tab") || part.equals("tab_selected")) {
-            skin.tab(x + 2.0F, y + 1.0F, w - 3.0F, h - 2.0F, part.equals("tab_selected"));
+            boolean selected = part.equals("tab_selected");
+            skin.tab(x + 2.0F, y + 1.0F, w - (selected ? 5.0F : 7.0F), h - 2.0F, selected);
             return true;
         }
         if (part.equals("overlay_recipe")) {
