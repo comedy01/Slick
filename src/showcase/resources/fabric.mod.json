@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"id": "slick-showcase",
+	"version": "1.0.0",
+	"name": "Slick showcase",
+	"description": "Development-only film director for Slick's gallery video. Not shipped.",
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.slick.showcase.SlickShowcaseFabric"
+		]
+	},
+	"depends": {
+		"slick": "*"
+	},
+	"mixins": [
+		"slick_showcase.mixins.json"
+	]
+}

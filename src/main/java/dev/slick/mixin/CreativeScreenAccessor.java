@@ -1,0 +1,18 @@
+package dev.slick.mixin;
+
+import net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
+import net.minecraft.world.item.CreativeModeTab;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Accessor;
+import org.spongepowered.asm.mixin.gen.Invoker;
+
+@Mixin(CreativeModeInventoryScreen.class)
+public interface CreativeScreenAccessor {
+    @Accessor("selectedTab")
+    static CreativeModeTab slick$selectedTab() {
+        throw new AssertionError();
+    }
+
+    @Invoker("selectTab")
+    void slick$selectTab(CreativeModeTab tab);
+}

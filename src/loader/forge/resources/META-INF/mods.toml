@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL="https://github.com/comedy01/Slick/issues"
+
+[[mods]]
+modId="slick"
+version="${version}"
+displayName="Slick"
+displayURL="https://github.com/comedy01/Slick"
+logoFile="assets/slick/icon128.png"
+authors="comedy01"
+description='''A modern, customizable look for the hotbar, inventory, crafting table, chests, hoppers, furnaces and more, with a hotbar selection that glides instead of snapping. Client-side only.'''
+
+[[dependencies.slick]]
+modId="forge"
+mandatory=true
+versionRange="${forge_range}"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.slick]]
+modId="minecraft"
+mandatory=true
+versionRange="${mc_range}"
+ordering="NONE"
+side="CLIENT"

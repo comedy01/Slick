@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+
+[[mods]]
+modId="slick_selftest"
+version="1.0.0"
+displayName="Slick self test"
+
+[[mixins]]
+config="slick_selftest.mixins.json"

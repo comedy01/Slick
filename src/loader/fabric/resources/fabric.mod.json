@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "slick",
+	"version": "${version}",
+	"name": "Slick",
+	"description": "A modern, customizable look for the hotbar, inventory, crafting table, chests, hoppers, furnaces and more, with a hotbar selection that glides instead of snapping. Client-side only.",
+	"icon": {
+		"16": "assets/slick/icon16.png",
+		"32": "assets/slick/icon32.png",
+		"128": "assets/slick/icon128.png"
+	},
+	"authors": [
+		"comedy01"
+	],
+	"license": "MIT",
+	"contact": {
+		"homepage": "https://github.com/comedy01/Slick",
+		"sources": "https://github.com/comedy01/Slick",
+		"issues": "https://github.com/comedy01/Slick/issues"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.slick.fabric.SlickFabric"
+		],
+		"modmenu": [
+			"dev.slick.fabric.SlickModMenu"
+		]
+	},
+	"mixins": [
+		"slick.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"fabric-api": "*",
+		"minecraft": "${range}",
+		"java": ">=${java_version}"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

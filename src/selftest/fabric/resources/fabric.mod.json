@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"id": "slick-selftest",
+	"version": "1.0.0",
+	"name": "Slick self test",
+	"description": "Development-only in-world checks for Slick. Not shipped.",
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.slick.selftest.fabric.SlickSelfTestFabric"
+		]
+	},
+	"depends": {
+		"slick": "*"
+	},
+	"mixins": [
+		"slick_selftest.mixins.json"
+	]
+}

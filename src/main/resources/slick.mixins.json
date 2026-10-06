@@ -1,0 +1,19 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "dev.slick.mixin",
+	"compatibilityLevel": "JAVA_${java_version}",
+	"client": [
+		"ContainerScreenAccessor",
+		"ContainerScreenMixin",
+		"CreativeScreenAccessor",
+		"GraphicsMixin",
+		"HudInvoker",
+		"HudMixin",
+		"MinecraftMixin",
+		"ScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
