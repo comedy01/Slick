@@ -774,8 +774,6 @@ public final class Showcase {
             });
         }
 
-        // Rapid looks: every few frames the whole look changes (style, theme, accent, corners), so the video shows
-        // how the menus actually look in many combinations instead of the settings screen.
         if (wanted("mix")) {
             Look[] looks = {
                     new Look(Style.MODERN, Theme.MIDNIGHT, Accent.BLUE, Corners.ROUND),
@@ -811,7 +809,6 @@ public final class Showcase {
             });
         }
 
-        // Every change opens a different station in a different look.
         if (wanted("stationmix")) {
             List<Supplier<Screen>> stations = List.of(() -> crafting(mc), () -> furnace(mc), () -> enchanting(mc),
                     () -> smithing(mc), () -> stonecutter(mc), () -> beacon(mc), () -> chest(mc),
@@ -838,7 +835,6 @@ public final class Showcase {
             });
         }
 
-        // The hover glow follows the accent: the cursor hops to a new slot on every accent.
         if (wanted("accents")) {
             Accent[] accents = {Accent.BLUE, Accent.VIOLET, Accent.PINK, Accent.RED, Accent.ORANGE, Accent.YELLOW,
                     Accent.GREEN, Accent.TEAL, Accent.WHITE};
@@ -847,7 +843,6 @@ public final class Showcase {
                 config.setTheme(Theme.ONYX);
                 Screens.open(mc, new InventoryScreen(mc.player));
             }, still);
-            // The cursor arrives at each slot (a 24-frame glide) as that accent comes in.
             Stop[] stops = new Stop[accents.length];
             for (int i = 0; i < accents.length; i++) {
                 int slot = hover[i];
@@ -864,7 +859,6 @@ public final class Showcase {
             });
         }
 
-        // Frost is see-through: sweep its opacity and step through the corner shapes.
         if (wanted("glass")) {
             scene(mc, config, 3, false, spot, () -> {
                 config.setTheme(Theme.FROST);
@@ -885,7 +879,6 @@ public final class Showcase {
             });
         }
 
-        // The hotbar in the world, restyled on every hop of the selection.
         if (wanted("hotbars")) {
             Look[] looks = {
                     new Look(Style.MODERN, Theme.MIDNIGHT, Accent.BLUE, Corners.ROUND),

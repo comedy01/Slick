@@ -7,9 +7,6 @@ import org.joml.Matrix3x2fc;
 
 import java.util.Arrays;
 
-// Many solid fills as one GUI element. Every fill submitted on its own makes GuiRenderState scan the elements already
-// placed for overlaps, and open a new layer when a fill sits inside the previous one, which is close to quadratic for
-// the thousands of pixel rows Painter draws. One element is placed once and keeps its fills in order.
 abstract class Quads {
     private final ScreenRectangle scissor;
     private float[] corners = new float[8 * 64];
@@ -60,7 +57,6 @@ abstract class Quads {
         bounds = scissor == null ? area : scissor.intersection(area);
     }
 
-    // 1.21.6-1.21.8 pass a z; 1.21.9 and newer do not. Both are here so one pack covers the range.
     public void buildVertices(VertexConsumer consumer) {
         buildVertices(consumer, 0.0F);
     }

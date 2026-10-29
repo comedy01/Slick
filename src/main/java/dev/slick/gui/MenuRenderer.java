@@ -426,7 +426,6 @@ public final class MenuRenderer {
     private static void glowSlots(Object screen, AbstractContainerMenu menu, Slot hovered, Skin skin, float rate, float dt) {
         for (Slot slot : menu.slots) {
             float target = slot == hovered && slot.isActive() && slot.isHighlightable() ? 1.0F : 0.0F;
-            // Keyed by identity: creative's inventory tab adds SlotWrappers without addSlot, so every slot.index is 0.
             float value = Motion.approach(GLOW.getOrDefault(slot, 0.0F), target, rate, dt);
             if (value <= 0.0F) {
                 GLOW.remove(slot);
